@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { GitListItemComponent } from "./git-list-item/git-list-item.component";
 
 @Component({
@@ -7,4 +7,6 @@ import { GitListItemComponent } from "./git-list-item/git-list-item.component";
   templateUrl: './gif-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class GifListComponent { }
+export class GifListComponent {
+  listGift = input.required<string[]>();
+}
